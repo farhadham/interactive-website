@@ -3,21 +3,22 @@ import "./App.css";
 import ButtonEnter from "./Components/ButtonEnter/ButtonEnter";
 import MainCircle from "./Components/SVGs/MainCircle";
 import { AnimatePresence } from "framer-motion";
-import Home from "./Components/Home/Home";
+import Main from "./Components/Main/Main";
 import Navigation from "./Components/Navigation/Navigation";
 
 function App() {
   const [isNotEntered, setIsNotEntered] = useState(true);
   const [enteredApp, setEnteredApp] = useState(false);
+  const [page, setPage] = useState(1);
 
   const enterHandler = () => {
     setIsNotEntered(!isNotEntered);
   };
 
-  const enterAppHandler = () => {
+  function enterAppHandler(a) {
     setEnteredApp(true);
-    console.log(true);
-  };
+    setPage(a);
+  }
 
   return (
     <div className="App">
@@ -31,7 +32,8 @@ function App() {
         <AnimatePresence>
           {isNotEntered && <ButtonEnter onClick={enterHandler} />}
         </AnimatePresence>
-        {enteredApp && <Navigation />}
+        {enteredApp && <Navigation setPage={setPage} />}
+        {enteredApp && <Main page={page} />}
       </div>
     </div>
   );

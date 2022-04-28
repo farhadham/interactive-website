@@ -1,0 +1,58 @@
+import React from "react";
+import styles from "./Home.module.scss";
+import { AnimatePresence, motion } from "framer-motion";
+
+const Home = ({ page }) => {
+  return (
+    page === 1 && (
+      <motion.div
+        className={styles.mainWrapper}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.4 }}
+      >
+        <motion.div
+          className={styles.background}
+          animate={{ opacity: 0.28 }}
+          initial={{ opacity: 0 }}
+          transition={{ duration: 0.4 }}
+        ></motion.div>
+        <motion.div
+          className={styles.container}
+          animate={{ opacity: 1 }}
+          initial={{ opacity: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          <div className={styles.texts}>
+            <motion.h2
+              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.2, delay: 0.4 }}
+            >
+              Web Developer
+            </motion.h2>
+            <motion.h1
+              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.2, delay: 0.3 }}
+            >
+              <span>HELLO</span>, MY
+              <br />
+              NAME IS
+              <br />
+              FARHAD FARAJI
+            </motion.h1>
+            <motion.h2
+              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.2, delay: 0.4 }}
+            >
+              Music Composer, Producer and Audio Engineer
+            </motion.h2>
+          </div>
+        </motion.div>
+      </motion.div>
+    )
+  );
+};
+
+export default Home;

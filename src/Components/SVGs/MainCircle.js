@@ -228,7 +228,7 @@ const MainCircle = (props) => {
             </motion.text>
             <motion.path
               onClick={() => {
-                props.onClick();
+                props.onClick(2);
               }}
               d="M399.24 203.13C425.948 203.13 447.6 181.478 447.6 154.77C447.6 128.062 425.948 106.41 399.24 106.41C372.531 106.41 350.88 128.062 350.88 154.77C350.88 181.478 372.531 203.13 399.24 203.13Z"
               stroke="white"
@@ -242,7 +242,7 @@ const MainCircle = (props) => {
             />
             <motion.text
               onClick={() => {
-                props.onClick();
+                props.onClick(2);
               }}
               className={styles.text3}
               x="360.24"
@@ -257,7 +257,7 @@ const MainCircle = (props) => {
             </motion.text>
             <motion.path
               onClick={() => {
-                props.onClick();
+                props.onClick(1);
               }}
               d="M244.25 113.65C270.958 113.65 292.61 91.9985 292.61 65.29C292.61 38.5815 270.958 16.93 244.25 16.93C217.542 16.93 195.89 38.5815 195.89 65.29C195.89 91.9985 217.542 113.65 244.25 113.65Z"
               stroke="white"
@@ -271,7 +271,7 @@ const MainCircle = (props) => {
             />
             <motion.text
               onClick={() => {
-                props.onClick();
+                props.onClick(1);
               }}
               className={styles.text4}
               x="218.25"

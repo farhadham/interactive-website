@@ -1,0 +1,29 @@
+$small: 576px;
+$medium: 992px;
+
+.wrapper {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+
+.background1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(../../../../public/Images/about-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+  top: 0;
+  opacity: 0.28;
+}
+.background2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: black;
+  z-index: 1;
+  top: 0;
+  opacity: 0.54;
+}
