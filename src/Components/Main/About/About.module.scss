@@ -23,7 +23,183 @@ $medium: 992px;
   height: 100%;
   position: absolute;
   background-color: black;
-  z-index: 1;
+  z-index: -1;
   top: 0;
   opacity: 0.54;
+}
+
+.contentWrapper {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 1025px) {
+  }
+
+  @media screen and (max-width: $medium) {
+    width: 100%;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 13%;
+    width: 80%;
+    // background-color: coral;
+
+    @media screen and (max-width: 1025px) {
+      margin-top: 10%;
+    }
+    @media screen and (max-width: $medium) {
+      margin-top: 40%;
+    }
+    @media screen and (max-width: $small) {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .left {
+      width: 50%;
+      text-align: left;
+      // background-color: rgb(24, 87, 66);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+
+      @media screen and (max-width: $small) {
+        width: 80%;
+      }
+
+      h1 {
+        margin-top: 0;
+        text-align: left;
+        color: white;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        // line-height: 47px;
+
+        @media screen and (max-width: 1285px) {
+          font-size: 40px * 0.8;
+        }
+      }
+
+      p {
+        text-align: left;
+        color: white;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 28px;
+
+        @media screen and (max-width: 1285px) {
+          font-size: 24px * 0.8;
+        }
+      }
+
+      span {
+        color: #d8ec91;
+      }
+    }
+
+    .right {
+      // background-color: rgb(161, 127, 255);
+
+      .image {
+        width: 500px;
+        height: 500px;
+        background-image: url(../../../../public/Images/farhad.png);
+        background-size: cover;
+        background-position: center;
+
+        @media screen and (max-width: 1285px) {
+          width: 400px;
+          height: 400px;
+        }
+
+        @media screen and (max-width: 1025px) {
+          width: 300px;
+          height: 300px;
+        }
+      }
+
+      .line {
+        height: 10px;
+        width: 100%;
+        background-color: #1f4f71;
+
+        @media screen and (max-width: 1285px) {
+          height: 8px;
+        }
+        @media screen and (max-width: 1025px) {
+          height: 6px;
+        }
+      }
+
+      .years {
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 28px;
+
+        @media screen and (max-width: 1285px) {
+          font-size: 36px * 0.8;
+        }
+        @media screen and (max-width: 1025px) {
+          font-size: 36px * 0.8 * 0.8;
+        }
+
+        .number {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 96px;
+          color: #d8ec91;
+
+          @media screen and (max-width: 1285px) {
+            font-size: 96px * 0.8;
+          }
+          @media screen and (max-width: 1025px) {
+            font-size: 96px * 0.8 * 0.8;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom {
+    margin-top: 50px;
+    margin-bottom: 70px;
+    width: 100%;
+    // background-color: rgb(80, 255, 147);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    color: white;
+
+    @media screen and (max-width: 1025px) {
+      font-size: 18px * 0.8;
+    }
+
+    @media screen and (max-width: $small) {
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+  }
 }

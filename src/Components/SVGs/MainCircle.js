@@ -315,7 +315,7 @@ const MainCircle = (props) => {
             </motion.text>
             <motion.path
               onClick={() => {
-                props.onClick();
+                props.onClick(3);
               }}
               d="M399.24 382.1C425.948 382.1 447.6 360.448 447.6 333.74C447.6 307.031 425.948 285.38 399.24 285.38C372.531 285.38 350.88 307.031 350.88 333.74C350.88 360.448 372.531 382.1 399.24 382.1Z"
               stroke="white"
@@ -329,7 +329,7 @@ const MainCircle = (props) => {
             />
             <motion.text
               onClick={() => {
-                props.onClick();
+                props.onClick(3);
               }}
               className={styles.text6}
               x="374.24"

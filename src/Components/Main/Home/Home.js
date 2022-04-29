@@ -16,11 +16,11 @@ const Home = ({ page }) => {
           initial={{ opacity: 0 }}
           transition={{ duration: 0.4 }}
         ></motion.div>
-        <motion.div
+        <div
           className={styles.container}
-          animate={{ opacity: 1 }}
-          initial={{ opacity: 0 }}
-          transition={{ duration: 0.4 }}
+          // animate={{ opacity: 1 }}
+          // initial={{ opacity: 0 }}
+          // transition={{ duration: 0.4 }}
         >
           <div className={styles.texts}>
             <motion.h2
@@ -49,7 +49,7 @@ const Home = ({ page }) => {
               Music Composer, Producer and Audio Engineer
             </motion.h2>
           </div>
-        </motion.div>
+        </div>
       </motion.div>
     )
   );
