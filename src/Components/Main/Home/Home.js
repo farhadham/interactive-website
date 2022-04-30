@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Home.module.scss";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Home = ({ page }) => {
+  const [button3Hovered, setButton3Hovered] = useState(false);
+
   return (
     page === 1 && (
       <motion.div
@@ -48,6 +50,26 @@ const Home = ({ page }) => {
             >
               Music Composer, Producer and Audio Engineer
             </motion.h2>
+            <a href="https://www.linkedin.com/in/farhadfaraji/">
+              <motion.button
+                type="button"
+                onMouseEnter={() => {
+                  setButton3Hovered(true);
+                }}
+                onMouseLeave={() => {
+                  setButton3Hovered(false);
+                }}
+                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.2, delay: 0.4 }}
+              >
+                LINKEDIN
+                <motion.div
+                  animate={{ width: button3Hovered ? "205px" : "1px" }}
+                  transition={{ duration: 0.3 }}
+                ></motion.div>
+              </motion.button>
+            </a>
           </div>
         </div>
       </motion.div>

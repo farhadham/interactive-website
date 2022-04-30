@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import styles from "./Contact.module.scss";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Contact = ({ page }) => {
   const [button1Hovered, setButton1Hovered] = useState(false);
-  const [button2Hovered, setButton2Hovered] = useState(false);
-  const [button3Hovered, setButton3Hovered] = useState(false);
 
   return (
     page === 6 && (

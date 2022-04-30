@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./About.module.scss";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const About = ({ page }) => {
   return (

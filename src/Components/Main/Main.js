@@ -6,10 +6,13 @@ import Portfolio from "./Portfolio/Portfolio";
 import Clients from "./Clients/Clients";
 import Education from "./Education/Education";
 import Contact from "./Contact/Contact";
+import Header from "./Header/Header";
 
 const Main = ({ page }) => {
   return (
     <div className={styles.mainWrapper}>
+      {window.innerWidth > 576 && <Header />}
+
       <Home page={page} />
       <About page={page} />
       <Portfolio page={page} />

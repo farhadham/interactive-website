@@ -74,3 +74,29 @@ $medium: 992px;
     }
   }
 }
+
+button {
+  margin-bottom: 20px;
+  width: 200px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: #ffffff00;
+  color: white;
+  font-size: 20px;
+  font-family: "roboto", sans-serif;
+  font-weight: 300;
+  border: 1px solid white;
+  padding: 3px 10px;
+  overflow: hidden;
+
+  div {
+    position: absolute;
+    top: 0;
+    left: -2px;
+    background: linear-gradient(to right, #d9ed92, #184e77);
+    width: 1px;
+    height: 50px;
+    z-index: -1;
+  }
+}

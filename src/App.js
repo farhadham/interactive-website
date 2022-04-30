@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import ButtonEnter from "./Components/ButtonEnter/ButtonEnter";
+
 import MainCircle from "./Components/SVGs/MainCircle";
 import { AnimatePresence } from "framer-motion";
 import Main from "./Components/Main/Main";
@@ -26,9 +26,6 @@ function App() {
         <AnimatePresence>
           {!enteredApp && <MainCircle onClick={enterAppHandler} />}
         </AnimatePresence>
-        {/* <AnimatePresence>
-          {isNotEntered && <ButtonEnter onClick={enterHandler} />}
-        </AnimatePresence> */}
         {enteredApp && <Navigation setPage={setPage} />}
         {enteredApp && <Main page={page} />}
       </div>
