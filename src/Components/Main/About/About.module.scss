@@ -29,6 +29,7 @@ $medium: 992px;
 }
 
 .contentWrapper {
+  overflow-x: hidden;
   width: 70%;
   display: flex;
   flex-direction: column;

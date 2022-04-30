@@ -73,6 +73,10 @@ const Navigation = (props) => {
                   <motion.li
                     onClick={() => {
                       props.setPage(item.page);
+                      if (window.innerWidth <= 992) {
+                        setNavIsOpen(false);
+                        setNavIsToggled(false);
+                      }
                     }}
                     key={index}
                     animate={{ backgroundPosition: "700px" }}

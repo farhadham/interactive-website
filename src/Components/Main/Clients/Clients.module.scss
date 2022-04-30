@@ -3,7 +3,6 @@ $medium: 992px;
 
 .wrapper {
   width: 100%;
-  height: auto;
   min-height: 100vh;
 }
 
@@ -11,7 +10,7 @@ $medium: 992px;
   width: 100%;
   height: 100%;
   position: absolute;
-  background-image: url(../../../../public/Images/portfolio-bg.jpg);
+  background-image: url(../../../../public/Images/clients-bg.jpg);
   background-size: cover;
   background-position: center;
   z-index: -3;
@@ -28,20 +27,7 @@ $medium: 992px;
   opacity: 0.54;
 }
 
-.backgroundDynamic {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  opacity: 1;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.7;
-}
-
 .contentWrapper {
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,45 +47,44 @@ $medium: 992px;
   span {
     color: #b5e48c;
   }
-
-  .content {
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    align-items: center;
-    flex-wrap: wrap;
-
-    .cont {
-      cursor: pointer;
-
-      min-width: 270px;
-      height: 200px;
-      border: 1px solid;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-
-      @media screen and (max-width: $small) {
-        height: 100px;
-      }
-    }
-  }
 }
 
-h1 {
-  margin-top: 12%;
+.content {
+  display: flex;
+  justify-content: center;
+  column-gap: 100px;
+  row-gap: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+img {
+  background-color: #000000b2;
+  margin: 0px 5px;
+}
+
+.h1 {
+  margin-top: 20%;
+  margin-bottom: 40px;
   font-family: "roboto", sans-serif;
   font-size: 40px;
   font-weight: 500;
 
+  @media screen and (max-width: 1025px) {
+    margin-top: 10%;
+  }
+
+  @media screen and (max-width: $medium) {
+    margin-top: 30%;
+  }
+
   @media screen and (max-width: $small) {
-    margin-top: 140px;
+    margin-top: 150px;
   }
 }
 
-.h2 {
-  text-align: center;
+h2 {
   font-family: "roboto", sans-serif;
   font-size: 25px;
   font-weight: 400;

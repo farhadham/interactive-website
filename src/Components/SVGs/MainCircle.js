@@ -170,7 +170,7 @@ const MainCircle = (props) => {
 
             <motion.path
               onClick={() => {
-                props.onClick();
+                props.onClick(6);
               }}
               d="M89.25 203.13 C115.959 203.13 137.61 181.478 137.61 154.77C137.61 128.062 115.959 106.41 89.25 106.41C62.5415 106.41 40.89 128.062 40.89 154.77C40.89 181.478 62.5415 203.13 89.25 203.13Z"
               stroke="white"
@@ -184,7 +184,7 @@ const MainCircle = (props) => {
             />
             <motion.text
               onClick={() => {
-                props.onClick();
+                props.onClick(6);
               }}
               className={styles.text1}
               x="89.25"
@@ -199,7 +199,7 @@ const MainCircle = (props) => {
             </motion.text>
             <motion.path
               onClick={() => {
-                props.onClick();
+                props.onClick(5);
               }}
               d="M136.998 341.511C141.277 315.148 123.375 290.307 97.0114 286.027C70.648 281.748 45.8071 299.651 41.5277 326.014C37.2483 352.378 55.151 377.218 81.5144 381.498C107.878 385.777 132.719 367.875 136.998 341.511Z"
               stroke="white"
@@ -213,7 +213,7 @@ const MainCircle = (props) => {
             />
             <motion.text
               onClick={() => {
-                props.onClick();
+                props.onClick(5);
               }}
               className={styles.text2}
               x="55.998"
@@ -286,7 +286,7 @@ const MainCircle = (props) => {
             </motion.text>
             <motion.path
               onClick={() => {
-                props.onClick();
+                props.onClick(4);
               }}
               d="M291.302 434.312C297.438 408.318 281.339 382.272 255.344 376.137C229.35 370.002 203.304 386.1 197.169 412.095C191.034 438.089 207.133 464.135 233.127 470.27C259.121 476.406 285.167 460.307 291.302 434.312Z"
               stroke="white"
@@ -300,7 +300,7 @@ const MainCircle = (props) => {
             />
             <motion.text
               onClick={() => {
-                props.onClick();
+                props.onClick(4);
               }}
               className={styles.text5}
               x="220.302"

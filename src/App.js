@@ -7,13 +7,13 @@ import Main from "./Components/Main/Main";
 import Navigation from "./Components/Navigation/Navigation";
 
 function App() {
-  const [isNotEntered, setIsNotEntered] = useState(true);
+  // const [isNotEntered, setIsNotEntered] = useState(true);
   const [enteredApp, setEnteredApp] = useState(false);
   const [page, setPage] = useState(1);
 
-  const enterHandler = () => {
-    setIsNotEntered(!isNotEntered);
-  };
+  // const enterHandler = () => {
+  //   setIsNotEntered(!isNotEntered);
+  // };
 
   function enterAppHandler(a) {
     setEnteredApp(true);
@@ -24,14 +24,11 @@ function App() {
     <div className="App">
       <div className="main-wrapper">
         <AnimatePresence>
-          {!isNotEntered && !enteredApp && (
-            <MainCircle onClick={enterAppHandler} />
-          )}
+          {!enteredApp && <MainCircle onClick={enterAppHandler} />}
         </AnimatePresence>
-
-        <AnimatePresence>
+        {/* <AnimatePresence>
           {isNotEntered && <ButtonEnter onClick={enterHandler} />}
-        </AnimatePresence>
+        </AnimatePresence> */}
         {enteredApp && <Navigation setPage={setPage} />}
         {enteredApp && <Main page={page} />}
       </div>

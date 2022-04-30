@@ -41,7 +41,7 @@ const Portfolio = ({ page }) => {
               initial={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.2, delay: 0.4 }}
             >
-              Latest Projects
+              <span>Latest</span> Projects
             </motion.h1>
             <motion.div
               className={styles.content}
@@ -64,9 +64,12 @@ const Portfolio = ({ page }) => {
                     setBg();
                     setBgOn(false);
                   }}
-                  whileHover={{ backgroundColor: "#00000066" }}
+                  whileHover={{
+                    backgroundColor: "#00000066",
+                    borderColor: "#b5e48c",
+                  }}
                 >
-                  <h2>NHL Stenden</h2>
+                  <h2 className={styles.h2}>NHL Stenden</h2>
                   <p>Short Film</p>
                 </motion.div>
               </a>
@@ -85,9 +88,12 @@ const Portfolio = ({ page }) => {
                     setBg();
                     setBgOn(false);
                   }}
-                  whileHover={{ backgroundColor: "#00000066" }}
+                  whileHover={{
+                    backgroundColor: "#00000066",
+                    borderColor: "#b5e48c",
+                  }}
                 >
-                  <h2>Eventopeople</h2>
+                  <h2 className={styles.h2}>Eventopeople</h2>
                   <p>Trailer Music</p>
                 </motion.div>
               </a>
@@ -106,9 +112,12 @@ const Portfolio = ({ page }) => {
                     setBg();
                     setBgOn(false);
                   }}
-                  whileHover={{ backgroundColor: "#00000066" }}
+                  whileHover={{
+                    backgroundColor: "#00000066",
+                    borderColor: "#b5e48c",
+                  }}
                 >
-                  <h2>Rowing Club bern</h2>
+                  <h2 className={styles.h2}>Rowing Club bern</h2>
                   <p>Short Film</p>
                 </motion.div>
               </a>
@@ -127,9 +136,12 @@ const Portfolio = ({ page }) => {
                     setBg();
                     setBgOn(false);
                   }}
-                  whileHover={{ backgroundColor: "#00000066" }}
+                  whileHover={{
+                    backgroundColor: "#00000066",
+                    borderColor: "#b5e48c",
+                  }}
                 >
-                  <h2>Caveworld Game</h2>
+                  <h2 className={styles.h2}>Caveworld Game</h2>
                   <p>Trailer Music</p>
                 </motion.div>
               </a>
@@ -148,9 +160,12 @@ const Portfolio = ({ page }) => {
                     setBg();
                     setBgOn(false);
                   }}
-                  whileHover={{ backgroundColor: "#00000066" }}
+                  whileHover={{
+                    backgroundColor: "#00000066",
+                    borderColor: "#b5e48c",
+                  }}
                 >
-                  <h2>Airmango Project</h2>
+                  <h2 className={styles.h2}>Airmango Project</h2>
                   <p>Trailer Music</p>
                 </motion.div>
               </a>
@@ -169,9 +184,12 @@ const Portfolio = ({ page }) => {
                     setBg();
                     setBgOn(false);
                   }}
-                  whileHover={{ backgroundColor: "#00000066" }}
+                  whileHover={{
+                    backgroundColor: "#00000066",
+                    borderColor: "#b5e48c",
+                  }}
                 >
-                  <h2>Idle Farmyard</h2>
+                  <h2 className={styles.h2}>Idle Farmyard</h2>
                   <p>Videogame Music</p>
                 </motion.div>
               </a>
