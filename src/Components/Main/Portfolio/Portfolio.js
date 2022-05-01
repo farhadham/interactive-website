@@ -49,11 +49,7 @@ const Portfolio = ({ page }) => {
               initial={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.2, delay: 0.3 }}
             >
-              <a
-                href="https://www.facebook.com/nhlstenden/videos/475244907279750"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://www.facebook.com/nhlstenden/videos/475244907279750">
                 <motion.div
                   className={styles.cont}
                   onMouseEnter={() => {

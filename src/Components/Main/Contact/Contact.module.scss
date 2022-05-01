@@ -166,6 +166,10 @@ a {
 form {
   width: 100%;
 
+  @media screen and (max-width: $small) {
+    padding-right: 15px;
+  }
+
   input {
     outline: none;
     margin-bottom: 20px;

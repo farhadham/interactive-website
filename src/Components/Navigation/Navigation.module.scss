@@ -1,6 +1,47 @@
 $small: 576px;
 $medium: 992px;
 
+.toggleButt {
+  @media screen and (min-width: $medium) {
+    display: none;
+  }
+
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  z-index: 1010;
+  border-radius: 50%;
+  top: 50px;
+  right: 50px;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+
+  .line1 {
+    width: 40px;
+    background-color: #383838;
+    height: 5px;
+    border-radius: 5px;
+  }
+  .line2 {
+    width: 40px;
+    background-color: #383838;
+    height: 5px;
+    border-radius: 5px;
+  }
+  .line3 {
+    width: 40px;
+    background-color: #383838;
+    height: 5px;
+    border-radius: 5px;
+  }
+}
+
 .wrapper {
   width: 30%;
   height: 100vh;
@@ -14,47 +55,6 @@ $medium: 992px;
 
   @media screen and (max-width: $medium) {
     width: 100%;
-  }
-
-  .toggleButt {
-    @media screen and (min-width: $medium) {
-      display: none;
-    }
-
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    background-color: white;
-    z-index: 101;
-    border-radius: 50%;
-    top: 50px;
-    right: 50px;
-    cursor: pointer;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 7px;
-
-    .line1 {
-      width: 40px;
-      background-color: #383838;
-      height: 5px;
-      border-radius: 5px;
-    }
-    .line2 {
-      width: 40px;
-      background-color: #383838;
-      height: 5px;
-      border-radius: 5px;
-    }
-    .line3 {
-      width: 40px;
-      background-color: #383838;
-      height: 5px;
-      border-radius: 5px;
-    }
   }
 
   .wallpaper {

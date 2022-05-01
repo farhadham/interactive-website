@@ -50,7 +50,11 @@ const Home = ({ page }) => {
             >
               Music Composer, Producer and Audio Engineer
             </motion.h2>
-            <a href="https://www.linkedin.com/in/farhadfaraji/">
+            <a
+              href="https://www.linkedin.com/in/farhadfaraji/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <motion.button
                 type="button"
                 onMouseEnter={() => {

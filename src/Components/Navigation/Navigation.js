@@ -23,7 +23,7 @@ const Navigation = (props) => {
   }, []);
 
   return (
-    <div className={styles.wrapper}>
+    <>
       <div
         className={styles.toggleButt}
         onClick={() => {
@@ -50,48 +50,61 @@ const Navigation = (props) => {
       </div>
       <AnimatePresence>
         {navIsOpen && (
-          <motion.div
-            className={styles.wallpaper}
-            initial={{ scale: 0.01 }}
-            animate={{ scale: 88 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            exit={{ scale: 0.01 }}
-          ></motion.div>
+          <div
+            key="container"
+            className={styles.wrapper}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <AnimatePresence>
+              {navIsOpen && (
+                <motion.div
+                  key="what"
+                  className={styles.wallpaper}
+                  initial={{ scale: 0.01 }}
+                  animate={{ scale: 88 }}
+                  transition={{ duration: 0.7, delay: 0.3 }}
+                  exit={{ scale: 0.01 }}
+                ></motion.div>
+              )}
+            </AnimatePresence>
+            <div className={styles.container}>
+              <AnimatePresence>
+                {navIsOpen && (
+                  <motion.ul
+                    key="nw"
+                    animate={{ opacity: 1 }}
+                    initial={{ opacity: 0 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3, delay: 0.3 }}
+                  >
+                    {navLinks.map((item, index) => {
+                      return (
+                        <motion.li
+                          onClick={() => {
+                            props.setPage(item.page);
+                            if (window.innerWidth <= 992) {
+                              setNavIsOpen(false);
+                              setNavIsToggled(false);
+                            }
+                          }}
+                          key={index}
+                          animate={{ backgroundPosition: "700px" }}
+                          transition={{ duration: 0.3 }}
+                          whileHover={{ backgroundPosition: "0px" }}
+                        >
+                          {item.title}
+                        </motion.li>
+                      );
+                    })}
+                  </motion.ul>
+                )}
+              </AnimatePresence>
+            </div>
+          </div>
         )}
       </AnimatePresence>
-      <div className={styles.container}>
-        <AnimatePresence>
-          {navIsOpen && (
-            <motion.ul
-              animate={{ opacity: 1 }}
-              initial={{ opacity: 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3, delay: 0.3 }}
-            >
-              {navLinks.map((item, index) => {
-                return (
-                  <motion.li
-                    onClick={() => {
-                      props.setPage(item.page);
-                      if (window.innerWidth <= 992) {
-                        setNavIsOpen(false);
-                        setNavIsToggled(false);
-                      }
-                    }}
-                    key={index}
-                    animate={{ backgroundPosition: "700px" }}
-                    transition={{ duration: 0.3 }}
-                    whileHover={{ backgroundPosition: "0px" }}
-                  >
-                    {item.title}
-                  </motion.li>
-                );
-              })}
-            </motion.ul>
-          )}
-        </AnimatePresence>
-      </div>
-    </div>
+    </>
   );
 };
 
